@@ -45,9 +45,6 @@ the sample data is converted to json [talksData.json](helpers/talksData.json)
 ```shell
 # you may use -DskipTests if the database is not up during the build process
 $ ./mvnw spring-boot:build-image
-# replace {{sqlNetworkName}} with the mysql
- network
-# check the network name by
-# docker network ls
+# replace {{sqlNetworkName}} with the mysql network - $ docker network ls
 $ docker container run --network {{sqlNetworkName}} --name tedtalks-container -p 8080:8080 -d tedtalks:latest
 ```
