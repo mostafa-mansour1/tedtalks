@@ -28,6 +28,20 @@ you will find a full documentation of the api through the link https://documente
 
 you can import the postman project [TedTalks.postman_collection.json](helpers/TedTalks.postman_collection.json)
 
+## Test the application
+
+edit the application properties file to connect the mysql database
+
+```file
+application.properties
+```
+
+then run
+
+```shell
+mvn test
+```
+
 ## Upload the sample data
 
 use the following end point to upload the sample data

@@ -57,7 +57,8 @@ public class SecurityInterceptor implements HandlerInterceptor {
             String basicAuthHeaderValue = request.getHeader(AUTH_HEADER_PARAMETER_AUTHERIZATION);
 
             // Process basic authentication
-            isValidBasicAuthRequest = authRepository.validateBasicAuthentication(userName, password, basicAuthHeaderValue);
+            isValidBasicAuthRequest = authRepository.validateBasicAuthentication(userName, password,
+                    basicAuthHeaderValue);
 
             // If this is invalid request, then set the status as UNAUTHORIZED.
             if (!isValidBasicAuthRequest) {
